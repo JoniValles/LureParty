@@ -7,11 +7,11 @@ async function initClient(username, password, hashingKey, proxy) {
   const authToken = await login.login(username, password)
   const client = new pogobuf.Client({
     authToken, authToken,
-    appSimulation: true,
-    version: 7701,
+	version: 9100,
     hashingKey: hashingKey,
     useHashingServer: true,
-    hashingServer: 'http://hash.goman.io/',
+    hashingServer: 'http://hash.goman.io',
+	hashingKey: '',
     proxy: proxy
   })
 
